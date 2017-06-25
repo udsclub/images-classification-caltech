@@ -6,8 +6,9 @@
 * Split dataset on train/validation parts
 * Train simple classificator and evaluate it
 * Know what neural networks means
-* Create small NN and train it
+* Create small fully connected NN and train it
 * Compare results with simple classificator
+* Find what convolution layers means
 * Study some optimization techniques - dropout, batchnorm, etc
 * Explore varios data augmentation methods
 * Build deep NN
@@ -17,5 +18,6 @@
   * pruning, quantization
   * knowledge distillation
   * XNOR-net
-  * you own method? 	
+  * you own method?
+* Visualizing what ConvNets learn(optional)
 * Compare with all other teams
