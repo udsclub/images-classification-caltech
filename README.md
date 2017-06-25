@@ -2,6 +2,11 @@
 
 This repo will contain all useful links for caltech-256 image classification competition.
 
+- Inside README.md(this page) - links and some detailed info
+- FAQ.md - frequently asked questions
+- roadmap.md - short roadmap without description that we should follow
+- schedule.md - what part of roadmap should be completed prior some dates. Have a little bit more detailed description.
+
 ## About dataset
 
 - [Info about dataset](http://www.vision.caltech.edu/Image_Datasets/Caltech256/)
@@ -9,16 +14,18 @@ This repo will contain all useful links for caltech-256 image classification com
 
 To have same conditions, we split dataset on train and test chunks.
 It's up to you get validation set from train one.
-We set up kaggle in class competition, but unfortunately it's under review yet.
-So splited datasets are available by direct links to S3:
+All data served via Kaggle in class:
+
+- [link to competition](https://inclass.kaggle.com/c/caltech-256)
+- [link to register in competition](https://kaggle.com/join/caltech256)
+
+Because Kaggle servers can be not very stable, I've serve required via S3 also:
 
 - [train](https://s3-us-west-2.amazonaws.com/usdc-caltech-256/train.zip)
 - [test](https://s3-us-west-2.amazonaws.com/usdc-caltech-256/test.zip)
 - [sample submission](https://s3-us-west-2.amazonaws.com/usdc-caltech-256/test_example.csv)
 
-In case kaggle in place will not be available, we will create simple HTTP server for validation.
-
-## Roadmap
+## Some info
 
 ### In case you are new to the machine learning
 
@@ -48,14 +55,3 @@ Here is the brief list of neural networks(NN) frameworks. You can use not NN alg
 - [keras](https://keras.io/) - syntactic sugar above theano or tensorflow. With it you can write your own model quite fast. Out of the box have all stuff that exist in theano and tensorflow, and a lot of self provided additional features, as data loader for example. Easy to understand. **I highly advice to use keras with tensorflow backend** is you want to train the NN, and not spend about a 2 weeks reading tons of manuals.
 - [pytorch](http://pytorch.org/) - new ML framework, inherited from [torch](http://torch.ch/). It's very young, so I cannot say anything. As first opinion it's have clear structure, a little bit strange approach to the optimization and some bugs. 
 
-### Neural networks for images
-
-TODO
-
-### Convolution networks with images
-
-TODO
-
-### Transfer learning
-
-TODO
