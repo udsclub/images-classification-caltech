@@ -17,3 +17,11 @@
 * Иногда в выборке попадаются папки не с изображеними:
   * Да, такие папки есть - они начинаются на `.`. Просто проверяйте `if not f_name.startswith('.'); continue`
   * Еще попадаются внутри не изображения - проверяйте как `if not f_name.endswith('.jpg'); continue`
+* Какой вариант data augmentation использовать? Вообще все методы хороши после которых изображение идентефицируемо, но я начал бы с самых простых:
+  * Horizontal flip
+  * Random horizontal/vertical shift
+  * Rotation up-to 20-30 degrees
+* Если используется pretrained сеть, какую выбрать:
+  * Прочитать [это сравнение](https://medium.com/towards-data-science/neural-network-architectures-156e5bad51ba) сетей для images classification
+  * Взять что-то из относительно нового(Inception, ResNet, Xception) что есть в вашем фреймворке
+  * Для Keras - думаю лучше попробовать [Xception](https://keras.io/applications/#xception)
