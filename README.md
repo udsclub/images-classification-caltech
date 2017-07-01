@@ -23,7 +23,18 @@ Because Kaggle servers can be not very stable, I've serve required via S3 also:
 
 - [train](https://s3-us-west-2.amazonaws.com/usdc-caltech-256/train.zip)
 - [test](https://s3-us-west-2.amazonaws.com/usdc-caltech-256/test.zip)
-- [sample submission](https://s3-us-west-2.amazonaws.com/usdc-caltech-256/test_example.csv)
+- [sample submission](https://s3-us-west-2.amazonaws.com/usdc-caltech-256/example_submission.csv)
+
+**UPDATE** there is 257 class should not be predicted - because it's contains various mess pictures.
+I've updated dataset and submission files on kaggle. You may or redownload test dataset from kaggle, or just remove such images from your prediction:
+
+```
+['11660.jpg', '12705.jpg', '13044.jpg', '14305.jpg', '14353.jpg', '14917.jpg',
+ '16561.jpg', '18023.jpg', '18553.jpg', '18699.jpg', '18890.jpg', '19102.jpg',
+ '2512.jpg', '25542.jpg', '25974.jpg', '2610.jpg', '2623.jpg', '26539.jpg',
+ '27451.jpg', '28278.jpg', '28891.jpg', '29901.jpg', '31811.jpg', '3866.jpg',
+ '5034.jpg', '5159.jpg', '5248.jpg', '5502.jpg', '5708.jpg', '7178.jpg']
+```
 
 ## Some info
 
