@@ -6,7 +6,9 @@ Here the brief list of existed models speedup techniques with the links:
   - hashing
     - [Compressing Neural Networks with the Hashing Trick](https://arxiv.org/abs/1504.04788)
   - Pruning
+    - [Learning both Weights and Connections for Efficient Neural Networks](https://arxiv.org/abs/1506.02626)
   - Vector quantization
+    - [Compressing Deep Convolutional Networks using Vector Quantization](https://arxiv.org/abs/1412.6115)
   - Huffman coding
     - [Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding](https://arxiv.org/abs/1510.00149)
   - Factorizations
