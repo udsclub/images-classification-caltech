@@ -7,6 +7,7 @@ Here the brief list of existed models speedup techniques with the links:
     - [Compressing Neural Networks with the Hashing Trick](https://arxiv.org/abs/1504.04788)
   - Pruning
     - [Learning both Weights and Connections for Efficient Neural Networks](https://arxiv.org/abs/1506.02626)
+    - [Pruning Convolutional Neural Networks for Resource Efficient Inference](https://arxiv.org/abs/1611.06440)
   - Vector quantization
     - [Compressing Deep Convolutional Networks using Vector Quantization](https://arxiv.org/abs/1412.6115)
   - Huffman coding
@@ -31,5 +32,6 @@ Blog posts:
 - [Compression of neural networks](https://blog.themusio.com/2016/12/02/compression-of-neural-networks/)
 - [Compressing and regularizing deep neural networks](https://www.oreilly.com/ideas/compressing-and-regularizing-deep-neural-networks)
 - Deep Compression and EIE [slides](http://web.stanford.edu/class/ee380/Abstracts/160106-slides.pdf) and [video](http://on-demand.gputechconf.com/gtc/2016/video/S6561.html)
+- [Pruning deep neural networks to make them fast and small(in pyTorch)](https://jacobgil.github.io/deeplearning/pruning-deep-learning)
 
 Comment/contributing are welcome!
