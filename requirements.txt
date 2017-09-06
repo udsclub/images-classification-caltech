@@ -1,0 +1,9 @@
+# manually install redis
+# manually install tensorflow if required
+
+Flask
+keras
+ipdb
+ipython
+redis
+h5py

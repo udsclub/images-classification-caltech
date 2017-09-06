@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Total results</title>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>User Name</th>
+        <th>User id</th>
+        <th>Model</th>
+        <th>Operations</th>
+        <th>Model size</th>
+        <th>Accuracy</th>
+        <th>Some magic metric</th>
+    </tr>
+    {% for result in results %}
+    <tr>
+        <th>{{result.user_name}}</th>
+        <th>{{result.user_id}}</th>
+        <th>{{result.model}}</th>
+        <th>{{result.operations}}</th>
+        <th>{{result.model_size}}</th>
+        <th>{{result.accuracy}}</th>
+        <th>NA</th>
+    </tr>
+    {% endfor %}
+</table>
+<p><a href="/">Back to the main page</a></p>
+</body>
+</html>
