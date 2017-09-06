@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve myproject
+After=network.target
+
+[Service]
+User=ubuntu
+Group=www-data
+WorkingDirectory=/home/ubuntu/images-classification-caltech/server
+Environment="PATH=/home/ubuntu/images-classification-caltech/.env/bin"
+ExecStart=/home/ubuntu/images-classification-caltech/.env/bin/gunicorn --workers 4 --bind unix:myproject.sock -m 007 wsgi:app
+
+[Install]
+WantedBy=multi-user.target

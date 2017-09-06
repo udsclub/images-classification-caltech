@@ -7,3 +7,6 @@ ipdb
 ipython
 redis
 h5py
+gunicorn
+tinydb
+uwsgi
