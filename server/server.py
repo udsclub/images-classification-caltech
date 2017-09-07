@@ -113,7 +113,7 @@ def show_leaderboard():
             'time_cons': '%.2f' % (float(time_cons) if time_cons else 0),
         }
         results.append(result)
-    results.sort(key=lambda x: x['accuracy'], reverse=True)
+    results.sort(key=lambda x: float(x['accuracy']), reverse=True)
     return render_template("show_leaderboard.html", results=results)
 
 
