@@ -3,7 +3,7 @@
 # python -m flask run -p 3000 --host=0.0.0.0
 import os
 import datetime
-import locale
+import humanfriendly
 
 from flask import Flask
 from flask import render_template, send_from_directory
@@ -25,7 +25,6 @@ results_db = redis.StrictRedis(
     charset="utf-8", decode_responses=True)
 
 ALLOWED_EXTENSIONS = set(['h5', 'hdf5'])
-locale.setlocale(locale.LC_ALL, 'en_US')
 
 
 def allowed_file(filename):
@@ -109,8 +108,8 @@ def show_leaderboard():
             'user_id': user_id,
             # 'model': key.split('/')[-1],
             'model': key,
-            'operations': locale.format('%d', int(operations), grouping=True),
-            'model_size': locale.format('%d', int(model_size), grouping=True),
+            'operations': humanfriendly.format_number(int(operations)),
+            'model_size': humanfriendly.format_number(int(model_size)),
             'accuracy': '%.4f' % float(accuracy),
             'time_cons': '%.2f' % (float(time_cons) if time_cons else 0),
         }
