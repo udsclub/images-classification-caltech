@@ -10,3 +10,7 @@ h5py
 gunicorn
 tinydb
 uwsgi
+pandas
+pillow
+scipy
+tqdm

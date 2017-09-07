@@ -29,6 +29,7 @@ tr:nth-child(even) {
         <th>Operations</th>
         <th>Model size</th>
         <th>Accuracy</th>
+        <th>Time consumption</th>
         <th>Some magic metric</th>
     </tr>
     {% for result in results %}
@@ -39,6 +40,7 @@ tr:nth-child(even) {
         <th>{{result.operations}}</th>
         <th>{{result.model_size}}</th>
         <th>{{result.accuracy}}</th>
+        <th>{{result.time_cons}}</th>
         <th>NA</th>
     </tr>
     {% endfor %}

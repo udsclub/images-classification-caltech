@@ -23,7 +23,7 @@ results_db = redis.StrictRedis(
     host='localhost', port=6379, db=2,
     charset="utf-8", decode_responses=True)
 
-ALLOWED_EXTENSIONS = set(['h5'])
+ALLOWED_EXTENSIONS = set(['h5', 'hdf5'])
 
 
 def allowed_file(filename):
@@ -87,7 +87,7 @@ def upload_model():
 
         # schedule the task
         redis_db.hmset('task_to_user_id', {file_path: user_id})
-        redis_db.lpush('scheduled_tasks', file_path)
+        redis_db.rpush('scheduled_tasks', file_path)
 
         return render_template("upload_model_complete.html",
                                user_name=user_name)
@@ -100,8 +100,8 @@ def show_leaderboard():
     for key in all_keys:
         user_id = redis_db.hmget('task_to_user_id', key)[0]
         user_name = redis_db.hmget('ids_to_user', user_id)[0]
-        operations, model_size, accuracy = results_db.hmget(
-            key, ['operations', 'model_size', 'accuracy'])
+        operations, model_size, accuracy, time_cons = results_db.hmget(
+            key, ['operations', 'model_size', 'accuracy', 'time_cons'])
         result = {
             'user_name': user_name,
             'user_id': user_id,
@@ -109,7 +109,8 @@ def show_leaderboard():
             'model': key,
             'operations': int(operations),
             'model_size': int(model_size),
-            'accuracy': int(accuracy)
+            'accuracy': '%.4f' % float(accuracy),
+            'time_cons': '%.2f' % (float(time_cons) if time_cons else 0),
         }
         results.append(result)
     results.sort(key=lambda x: x['accuracy'], reverse=True)
