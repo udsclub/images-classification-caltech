@@ -22,8 +22,8 @@ results_db = redis.StrictRedis(
 
 
 ### Some settings
-base_dir = '/Users/illarionkhliestov/Datasets/caltech-256/'
-# base_dir = '/home/ubuntu/Datasets/caltech-256'
+# base_dir = '/Users/illarionkhliestov/Datasets/caltech-256/'
+base_dir = '/home/ubuntu/Datasets/caltech-256'
 csv_path = os.path.join(base_dir, 'kaggle_test.csv')
 df = pd.read_csv(csv_path)
 images_dir = os.path.join(base_dir, 'test')
@@ -119,6 +119,7 @@ def get_all_results(model_path):
         results['accuracy'], results['time_cons'] = get_model_accuracy(model)
     except Exception:
         pass
+    del model
     return results
 
 
