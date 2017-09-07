@@ -1,0 +1,11 @@
+[Unit]
+Description=Evaluation of the loaded models
+After=multi-user.target
+
+[Service]
+Type=idle
+Environment="PATH=/home/ubuntu/images-classification-caltech/.env/bin"
+ExecStart=/home/ubuntu/images-classification-caltech/.env/bin/python home/ubuntu/images-classification-caltech/server/model_evaluator.py
+
+[Install]
+WantedBy=multi-user.target
